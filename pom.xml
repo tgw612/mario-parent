@@ -1,0 +1,935 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <groupId>com.mario.mario-parent</groupId>
+  <artifactId>mario-parent</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0.0-SNAPSHOT</version>
+  <modelVersion>4.0.0</modelVersion>
+  <modules>
+    <module>mario-common-api</module>
+    <module>mario-common</module>
+    <module>mario-task</module>
+    <module>mario-jackson</module>
+    <module>mario-mail</module>
+    <module>mario-redis</module>
+    <module>mario-security</module>
+    <module>mario-security-autoconfigure</module>
+    <module>mario-ali-search</module>
+    <module>mario-cmq</module>
+    <module>mario-cmq-example</module>
+    <module>mario-cmq-ext</module>
+    <module>mario-ali-rocketmq</module>
+    <module>mario-ali-mq</module>
+    <module>mario-ali-mq-autoconfigure</module>
+    <module>mario-rocketmq</module>
+    <module>mario-rocketmq-example</module>
+    <module>mario-rocketmq-ext</module>
+    <module>mario-rocketmq-ext-autoconfigure</module>
+    <module>mario-elasticsearch</module>
+    <module>mario-mongodb</module>
+    <module>mario-task</module>
+    <module>mario-http</module>
+    <module>mario-httpclient</module>
+    <module>mario-reg</module>
+    <module>mario-mysql</module>
+    <module>mario-jdbc</module>
+    <module>mario-shardingjdbc-autoconfigure</module>
+    <module>mario-boot-autoimport</module>
+    <module>mario-server</module>
+    <module>mario-rds</module>
+    <module>mario-dcdn</module>
+    <module>mario-json</module>
+    <!-- ali 控制台demo -->
+    <module>mario-ali</module>
+    <!-- 依赖sibu-mall-common包 -->
+    <module>mario-ahas-autoconfigure</module>
+    <module>mario-trace</module>
+    <module>mario-healthcheck-autoconfigure</module>
+  </modules>
+
+  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.testSource>1.8</maven.compiler.testSource>
+    <maven.compiler.testTarget>1.8</maven.compiler.testTarget>
+
+    <!-- plugins -->
+    <maven.compiler.plugin.version>3.1</maven.compiler.plugin.version>
+    <maven.surefire.plugin.version>2.17</maven.surefire.plugin.version>
+    <maven.jar.plugin.version>2.6</maven.jar.plugin.version>
+    <maven.source.plugin.version>2.2.1</maven.source.plugin.version>
+    <maven.resources.plugin.version>2.6</maven.resources.plugin.version>
+    <maven.deploy.plugin.version>2.7</maven.deploy.plugin.version>
+    <maven.war.plugin.version>2.4</maven.war.plugin.version>
+
+    <!-- 2.0.5.RELEASE -->
+    <spring-boot.version>2.1.1.RELEASE</spring-boot.version>
+
+    <spring.version>5.1.3.RELEASE</spring.version>
+    <spring-data-redis.version>2.0.2.RELEASE</spring-data-redis.version>
+
+    <redis.version>2.9.0</redis.version>
+    <redisson.version>3.12.5</redisson.version>
+
+    <validation-api.version>2.0.0.Final</validation-api.version>
+    <lombok.version>1.16.18</lombok.version>
+    <commons-lang3.version>3.7</commons-lang3.version>
+    <commons-beanutils.version>1.9.3</commons-beanutils.version>
+    <commons-codec.version>1.13</commons-codec.version>
+    <joda.time.version>2.9.9</joda.time.version>
+    <slf4j.version>1.7.24</slf4j.version>
+    <protostuff.version>1.1.3</protostuff.version>
+
+    <!-- mongodb start -->
+    <spring-data-mongodb.version>2.1.3.RELEASE</spring-data-mongodb.version>
+    <mongo-java-driver.version>3.12.4</mongo-java-driver.version>
+    <!-- mongodb end -->
+
+    <commons-pool2.version>2.4.3</commons-pool2.version>
+    <jackson.version>2.11.0</jackson.version>
+    <quartz.version>2.3.0</quartz.version>
+
+    <javax.servlet.api.version>4.0.0</javax.servlet.api.version>
+    <javax.servlet.jsp.version>2.3.1</javax.servlet.jsp.version>
+    <jstl.version>1.2</jstl.version>
+
+    <!-- fastjson bug 越多 https://github.com/alibaba/fastjson/releases -->
+    <!-- fastjson 1.2.60版本发布 修复拒绝服务安全问题 -->
+    <alibaba.fastjson.version>1.2.62</alibaba.fastjson.version>
+    <!-- aliyun dependency start -->
+    <aliyun.opensearch.version>2.1.3</aliyun.opensearch.version>
+    <aliyun.ons.client.version>1.8.0.Final</aliyun.ons.client.version>
+    <!--<aliyun.ons.client.version>1.2.7.Final</aliyun.ons.client.version>-->
+    <!-- aliyun dependency end-->
+
+    <!-- elasticsearch client -->
+    <elasticsearch.client.version>6.2.3</elasticsearch.client.version>
+
+    <mail.version>1.5.0-b01</mail.version>
+
+    <httpclient.version>4.5.3</httpclient.version>
+
+    <rocketmq-client.version>4.2.0</rocketmq-client.version>
+
+    <guava.version>23.0</guava.version>
+
+    <commons-cli.version>1.3.1</commons-cli.version>
+    <!-- test -->
+    <junit.version>4.12</junit.version>
+    <testng.version>6.9.10</testng.version>
+    <!-- 性能测试 -->
+    <contiperf.version>2.2.0</contiperf.version>
+
+    <mockito.version>1.10.19</mockito.version>
+    <jetcache.version>2.5.9</jetcache.version>
+    <lettuce.version>5.1.0.RELEASE</lettuce.version>
+    <curator.version>2.12.0</curator.version>
+
+    <mysql.version>5.1.40</mysql.version>
+    <!-- 官方文档：https://github.com/alibaba/druid/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98 -->
+    <druid.version>1.1.10</druid.version>
+
+    <sharding-sphere.version>3.0.0</sharding-sphere.version>
+    <mybatis.version>3.4.6</mybatis.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+    </dependency>
+  </dependencies>
+
+  <dependencyManagement>
+    <dependencies>
+
+      <!-- local dependency start  -->
+      <dependency>
+        <groupId>com.mario.mario-parent</groupId>
+        <artifactId>mario-common-api</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.mario.mario-parent</groupId>
+        <artifactId>mario-common</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.mario.mario-parent</groupId>
+        <artifactId>mario-jackson</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.mario.mario-parent</groupId>
+        <artifactId>mario-json</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.mario.mario-parent</groupId>
+        <artifactId>mario-mail</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.mario.mario-parent</groupId>
+        <artifactId>mario-redis</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.mario.mario-parent</groupId>
+        <artifactId>mario-security</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.mario.mario-parent</groupId>
+        <artifactId>mario-security-autoconfigure</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.mario.mario-parent</groupId>
+        <artifactId>mario-ali-search</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.mario.mario-parent</groupId>
+        <artifactId>mario-ali-rocketmq</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.mario.mario-parent</groupId>
+        <artifactId>mario-ali-mq</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.mario.mario-parent</groupId>
+        <artifactId>mario-ali-mq-autoconfigure</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.mario.mario-parent</groupId>
+        <artifactId>mario-rocketmq</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.mario.mario-parent</groupId>
+        <artifactId>mario-rocketmq-example</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.mario.mario-parent</groupId>
+        <artifactId>mario-rocketmq-ext</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.mario.mario-parent</groupId>
+        <artifactId>mario-rocketmq-ext-autoconfigure</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.mario.mario-parent</groupId>
+        <artifactId>mario-elasticsearch</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.mario.mario-parent</groupId>
+        <artifactId>mario-mongodb</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.mario.mario-parent</groupId>
+        <artifactId>mario-task</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.mario.mario-parent</groupId>
+        <artifactId>mario-http</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.mario.mario-parent</groupId>
+        <artifactId>mario-httpclient</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.mario.mario-parent</groupId>
+        <artifactId>mario-cmq</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.mario.mario-parent</groupId>
+        <artifactId>mario-cmq-ext</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.mario.mario-parent</groupId>
+        <artifactId>mario-cmq-example</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.mario.mario-parent</groupId>
+        <artifactId>mario-reg</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+<!--      <dependency>-->
+<!--        <groupId>com.mario.mario-parent</groupId>-->
+<!--        <artifactId>mario-reg-api</artifactId>-->
+<!--        <version>${project.version}</version>-->
+<!--      </dependency>-->
+<!--      <dependency>-->
+<!--        <groupId>com.mario.mario-parent</groupId>-->
+<!--        <artifactId>mario-reg-zookeeper-curator</artifactId>-->
+<!--        <version>${project.version}</version>-->
+<!--      </dependency>-->
+<!--      <dependency>-->
+<!--        <groupId>com.mario.mario-parent</groupId>-->
+<!--        <artifactId>mario-reg-zookeeper-curator-autoconfigure</artifactId>-->
+<!--        <version>${project.version}</version>-->
+<!--      </dependency>-->
+      <dependency>
+        <groupId>com.mario.mario-parent</groupId>
+        <artifactId>mario-mysql</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.mario.mario-parent</groupId>
+        <artifactId>mario-jdbc</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.mario.mario-parent</groupId>
+        <artifactId>mario-shardingjdbc-autoconfigure</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.mario.mario-parent</groupId>
+        <artifactId>mario-boot-autoimport</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.mario.mario-parent</groupId>
+        <artifactId>mario-server</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+<!--      <dependency>-->
+<!--        <groupId>com.mario.mario-parent</groupId>-->
+<!--        <artifactId>mario-server-http</artifactId>-->
+<!--        <version>${project.version}</version>-->
+<!--      </dependency>-->
+<!--      <dependency>-->
+<!--        <groupId>com.mario.mario-parent</groupId>-->
+<!--        <artifactId>mario-server-http-spring</artifactId>-->
+<!--        <version>${project.version}</version>-->
+<!--      </dependency>-->
+      <dependency>
+        <groupId>com.mario.mario-parent</groupId>
+        <artifactId>mario-ahas-autoconfigure</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.mario.mario-parent</groupId>
+        <artifactId>mario-trace</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.mario.mario-parent</groupId>
+        <artifactId>mario-dcdn</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <!--<dependency>
+          <groupId>com.mario.mario-parent</groupId>
+          <artifactId>mario-cmq-ext</artifactId>
+          <version>2.0.8</version>
+      </dependency>-->
+      <!-- local dependency end -->
+
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-dependencies</artifactId>
+        <version>${spring-boot.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+
+      <!--validation begin-->
+      <dependency>
+        <groupId>javax.validation</groupId>
+        <artifactId>validation-api</artifactId>
+        <version>${validation-api.version}</version>
+      </dependency>
+      <!--validation end -->
+
+      <!--lombok begin -->
+      <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>${lombok.version}</version>
+      </dependency>
+      <!--lombok end -->
+
+      <!--slf4j begin -->
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>${slf4j.version}</version>
+      </dependency>
+      <!--slf4j end -->
+
+      <!-- UTILS begin -->
+      <dependency>
+        <groupId>com.google.guava</groupId>
+        <artifactId>guava</artifactId>
+        <version>${guava.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-lang3</artifactId>
+        <version>${commons-lang3.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>commons-codec</groupId>
+        <artifactId>commons-codec</artifactId>
+        <version>${commons-codec.version}</version>
+      </dependency>
+      <!-- UTILS end -->
+
+      <!-- commons-beanutils start -->
+      <dependency>
+        <groupId>commons-beanutils</groupId>
+        <artifactId>commons-beanutils</artifactId>
+        <version>${commons-beanutils.version}</version>
+      </dependency>
+      <!-- commons-beanutils start -->
+
+      <!-- redis begin -->
+      <dependency>
+        <groupId>redis.clients</groupId>
+        <artifactId>jedis</artifactId>
+        <version>${redis.version}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-pool2</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+
+      <!-- redisson begin -->
+      <dependency>
+        <groupId>org.redisson</groupId>
+        <artifactId>redisson</artifactId>
+        <version>${redisson.version}</version>
+      </dependency>
+
+      <!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-redis -->
+      <dependency>
+        <groupId>org.springframework.data</groupId>
+        <artifactId>spring-data-redis</artifactId>
+        <version>${spring-data-redis.version}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-pool2</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <!--redis end -->
+
+      <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-pool2</artifactId>
+        <version>${commons-pool2.version}</version>
+      </dependency>
+
+      <!-- 序列化工具 protostuff begin -->
+      <dependency>
+        <groupId>com.dyuproject.protostuff</groupId>
+        <artifactId>protostuff-core</artifactId>
+        <version>${protostuff.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.dyuproject.protostuff</groupId>
+        <artifactId>protostuff-runtime</artifactId>
+        <version>${protostuff.version}</version>
+      </dependency>
+      <!-- 序列化工具 protostuff end -->
+
+      <!-- joda time start -->
+      <dependency>
+        <groupId>joda-time</groupId>
+        <artifactId>joda-time</artifactId>
+        <version>${joda.time.version}</version>
+      </dependency>
+      <!-- joda time end -->
+
+      <!--json related begin -->
+      <!-- the core, which includes Streaming API, shared low-level abstractions (but NOT data-binding) -->
+      <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-core</artifactId>
+        <version>${jackson.version}</version>
+      </dependency>
+      <!-- Just the annotations; use this dependency if you want to attach annotations
+           to classes without connecting them to the code. -->
+      <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-annotations</artifactId>
+        <version>${jackson.version}</version>
+      </dependency>
+      <!-- databinding; ObjectMapper, JsonNode and related classes are here -->
+      <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-databind</artifactId>
+        <version>${jackson.version}</version>
+      </dependency>
+      <!--json related end -->
+      <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-xml -->
+<!--      <dependency>-->
+<!--        <groupId>com.fasterxml.jackson.dataformat</groupId>-->
+<!--        <artifactId>jackson-dataformat-xml</artifactId>-->
+<!--        <version>2.10.3</version>-->
+<!--      </dependency>-->
+      <!--json related end -->
+
+      <!-- spring related start -->
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-web</artifactId>
+        <version>${spring.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-context</artifactId>
+        <version>${spring.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-context-support</artifactId>
+        <version>${spring.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-beans</artifactId>
+        <version>${spring.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-core</artifactId>
+        <version>${spring.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-jdbc</artifactId>
+        <version>${spring.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-webmvc</artifactId>
+        <version>${spring.version}</version>
+      </dependency>
+      <!-- spring related end -->
+
+      <!-- JSP Support start -->
+<!--      <dependency>-->
+<!--        <groupId>javax.servlet</groupId>-->
+<!--        <artifactId>javax.servlet-api</artifactId>-->
+<!--        <version>${javax.servlet.api.version}</version>-->
+<!--      </dependency>-->
+
+<!--      <dependency>-->
+<!--        <groupId>javax.servlet</groupId>-->
+<!--        <artifactId>jstl</artifactId>-->
+<!--        <version>${jstl.version}</version>-->
+<!--      </dependency>-->
+
+<!--      <dependency>-->
+<!--        <groupId>javax.servlet.jsp</groupId>-->
+<!--        <artifactId>javax.servlet.jsp-api</artifactId>-->
+<!--        <version>${javax.servlet.jsp.version}</version>-->
+<!--      </dependency>-->
+      <!-- JSP Support end -->
+
+      <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>fastjson</artifactId>
+        <version>${alibaba.fastjson.version}</version>
+      </dependency>
+
+      <!-- aliyun dependency start -->
+      <dependency>
+        <groupId>com.aliyun.opensearch</groupId>
+        <artifactId>aliyun-sdk-opensearch</artifactId>
+        <version>${aliyun.opensearch.version}</version>
+      </dependency>
+      <!-- aliyun dependency end -->
+
+      <!-- aliyun rocketmq dependency start -->
+      <dependency>
+        <groupId>com.aliyun.openservices</groupId>
+        <artifactId>ons-client</artifactId>
+        <version>${aliyun.ons.client.version}</version>
+      </dependency>
+      <!-- aliyun rocketmq dependency end -->
+
+      <!-- elasticsearch dependency start -->
+      <dependency>
+        <groupId>org.elasticsearch.client</groupId>
+        <artifactId>transport</artifactId>
+        <version>${elasticsearch.client.version}</version>
+      </dependency>
+      <!-- elasticsearch dependency end -->
+
+      <!-- mail start-->
+      <dependency>
+        <groupId>javax.mail</groupId>
+        <artifactId>mail</artifactId>
+        <version>${mail.version}</version>
+      </dependency>
+      <!-- mail end-->
+
+      <!-- mongodb java driver start-->
+<!--      <dependency>-->
+<!--        <groupId>org.mongodb</groupId>-->
+<!--        <artifactId>mongo-java-driver</artifactId>-->
+<!--        <version>${mongo-java-driver.version}</version>-->
+<!--      </dependency>-->
+      <!-- mongodb java driver end-->
+
+      <!-- spring mongodb start -->
+      <dependency>
+        <groupId>org.springframework.data</groupId>
+        <artifactId>spring-data-mongodb</artifactId>
+        <version>${spring-data-mongodb.version}</version>
+      </dependency>
+      <!-- spring mongodb end-->
+
+      <!-- quartz start -->
+      <dependency>
+        <groupId>org.quartz-scheduler</groupId>
+        <artifactId>quartz</artifactId>
+        <version>${quartz.version}</version>
+      </dependency>
+      <!-- quartz end -->
+
+      <!-- httpclinet start -->
+      <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
+      <dependency>
+        <groupId>org.apache.httpcomponents</groupId>
+        <artifactId>httpclient</artifactId>
+        <version>${httpclient.version}</version>
+      </dependency>
+      <!-- httpclinet end -->
+
+      <!-- apache rocketmq start-->
+      <!-- https://mvnrepository.com/artifact/org.apache.rocketmq/rocketmq-client -->
+      <dependency>
+        <groupId>org.apache.rocketmq</groupId>
+        <artifactId>rocketmq-client</artifactId>
+        <version>${rocketmq-client.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.rocketmq</groupId>
+        <artifactId>rocketmq-remoting</artifactId>
+        <version>${rocketmq-client.version}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-tcnative</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.rocketmq</groupId>
+        <artifactId>rocketmq-common</artifactId>
+        <version>${rocketmq-client.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.rocketmq</groupId>
+        <artifactId>rocketmq-openmessaging</artifactId>
+        <version>${rocketmq-client.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.rocketmq</groupId>
+        <artifactId>rocketmq-filter</artifactId>
+        <version>${rocketmq-client.version}</version>
+      </dependency>
+      <!-- apache rocketmq end-->
+
+      <dependency>
+        <groupId>com.alicp.jetcache</groupId>
+        <artifactId>jetcache-starter-redis-lettuce</artifactId>
+        <version>${jetcache.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.lettuce</groupId>
+        <artifactId>lettuce-core</artifactId>
+        <version>${lettuce.version}</version>
+      </dependency>
+
+      <!-- zookeeper start -->
+      <dependency>
+        <groupId>org.apache.curator</groupId>
+        <artifactId>curator-framework</artifactId>
+        <version>${curator.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.curator</groupId>
+        <artifactId>curator-client</artifactId>
+        <version>${curator.version}</version>
+        <exclusions>
+          <exclusion>
+            <artifactId>netty</artifactId>
+            <groupId>io.netty</groupId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.curator</groupId>
+        <artifactId>curator-recipes</artifactId>
+        <version>${curator.version}</version>
+      </dependency>
+      <!-- zookeeper end -->
+
+      <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>${mysql.version}</version>
+      </dependency>
+
+      <!-- alibaba druid 数据库连接池 begin -->
+      <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>druid</artifactId>
+        <version>${druid.version}</version>
+      </dependency>
+      <!-- alibaba druid 数据库连接池 end -->
+
+      <!-- sharding-jdbc begin -->
+      <dependency>
+        <groupId>io.shardingsphere</groupId>
+        <artifactId>sharding-jdbc-core</artifactId>
+        <version>${sharding-sphere.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.shardingsphere</groupId>
+        <artifactId>sharding-jdbc-spring-boot-starter</artifactId>
+        <version>${sharding-sphere.version}</version>
+      </dependency>
+      <!-- sharding-jdbc begin -->
+
+      <dependency>
+        <groupId>io.shardingsphere</groupId>
+        <artifactId>sharding-proxy</artifactId>
+        <version>${sharding-sphere.version}</version>
+      </dependency>
+
+      <!-- https://mvnrepository.com/artifact/commons-cli/commons-cli -->
+      <dependency>
+        <groupId>commons-cli</groupId>
+        <artifactId>commons-cli</artifactId>
+        <version>${commons-cli.version}</version>
+      </dependency>
+
+      <!-- mybatis -->
+      <dependency>
+        <groupId>org.mybatis</groupId>
+        <artifactId>mybatis</artifactId>
+        <version>${mybatis.version}</version>
+        <!--                <scope>provided</scope>-->
+      </dependency>
+
+      <!--test related begin -->
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>${junit.version}</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.testng</groupId>
+        <artifactId>testng</artifactId>
+        <version>${testng.version}</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-test</artifactId>
+        <version>${spring.version}</version>
+        <scope>test</scope>
+      </dependency>
+      <!-- 性能测试 -->
+<!--      <dependency>-->
+<!--        <groupId>org.databene</groupId>-->
+<!--        <artifactId>contiperf</artifactId>-->
+<!--        <version>2.2.0</version>-->
+<!--      </dependency>-->
+      <!--test related begin -->
+      <dependency>
+        <groupId>org.mockito</groupId>
+        <artifactId>mockito-all</artifactId>
+        <version>${mockito.version}</version>
+        <scope>test</scope>
+      </dependency>
+
+    </dependencies>
+  </dependencyManagement>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>${maven.compiler.plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>${maven.surefire.plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>${maven.jar.plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-source-plugin</artifactId>
+          <version>${maven.source.plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>${maven.resources.plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>${maven.deploy.plugin.version}</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+          <meminitial>1024m</meminitial>
+          <maxmem>1024m</maxmem>
+          <encoding>UTF-8</encoding>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <configuration>
+          <argLine>-Xmx1024m -XX:PermSize=256m -XX:MaxPermSize=256m</argLine>
+          <includes>
+            <include>**/*Test.java</include>
+          </includes>
+          <argLine>-XX:-UseSplitVerifier</argLine>
+          <!-- 打包过程忽略Junit测试 -->
+          <skip>true</skip>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+            <configuration>
+              <excludes>
+                <exclude>**/test/*.class</exclude>
+              </excludes>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>attach-sources</id>
+            <phase>install</phase>
+            <goals>
+              <goal>jar-no-fork</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <configuration>
+          <encoding>UTF-8</encoding>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <repositories>
+    <repository>
+      <id>tdn-nexus</id>
+      <name>tdn-nexus</name>
+      <!-- tdn-->
+      <url>http://47.97.160.249:8081/repository/maven-public/</url>
+      <!-- sibu 内网-->
+      <!--<url>http://172.16.0.73:8081/nexus/content/repositories/public/</url>-->
+      <!-- sibu 外网-->
+      <!--<url>http://183.6.150.110:8081/nexus/content/repositories/public/</url>-->
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>tdn-nexus</id>
+      <name>tdn-nexus</name>
+      <!-- tdn-->
+      <url>http://47.97.160.249:8081/repository/maven-public/</url>
+      <!-- sibu 内网-->
+      <!--<url>http://172.16.0.73:8081/nexus/content/repositories/public/</url>-->
+      <!-- sibu 外网-->
+      <!--<url>http://183.6.150.110:8081/nexus/content/repositories/public/</url>-->
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </pluginRepository>
+  </pluginRepositories>
+  <distributionManagement>
+    <repository>
+      <id>tdn-nexus</id>
+      <name>Nexus Release Repository</name>
+      <!-- tdn-->
+      <url>http://47.97.160.249:8081/repository/maven-releases/</url>
+      <!-- sibu 内网-->
+      <!--<url>http://172.16.0.73:8081/nexus/content/repositories/releases/</url>-->
+      <!-- sibu 外网-->
+      <!--<url>http://183.6.150.110:8081/nexus/content/repositories/releases/</url>-->
+    </repository>
+    <snapshotRepository>
+      <id>tdn-nexus</id>
+      <name>Nexus Snapshot Repository</name>
+      <!-- tdn-->
+      <url>http://47.97.160.249:8081/repository/maven-snapshots/</url>
+      <!-- sibu 内网-->
+      <!--<url>http://172.16.0.73:8081/nexus/content/repositories/snapshots/</url>-->
+      <!-- sibu 外网-->
+      <!--<url>http://183.6.150.110:8081/nexus/content/repositories/snapshots/</url>-->
+    </snapshotRepository>
+  </distributionManagement>
+</project>

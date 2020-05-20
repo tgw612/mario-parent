@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.mario.mario-parent</groupId>
+    <artifactId>mario-parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+
+  <groupId>com.mario.mario-parent</groupId>
+  <artifactId>mario-shardingjdbc-autoconfigure</artifactId>
+  <packaging>jar</packaging>
+
+  <dependencies>
+
+    <!-- sharding-jdbc begin -->
+    <dependency>
+      <groupId>io.shardingsphere</groupId>
+      <artifactId>sharding-jdbc-core</artifactId>
+      <!--            <optional>true</optional>-->
+    </dependency>
+    <!-- sharding-jdbc begin -->
+
+    <!-- sharding-proxy begin -->
+    <dependency>
+      <groupId>io.shardingsphere</groupId>
+      <artifactId>sharding-proxy</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <!-- sharding-proxy begin -->
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-autoconfigure</artifactId>
+    </dependency>
+
+    <!-- @ConfigurationProperties annotation processing (metadata for IDEs) -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-configuration-processor</artifactId>
+      <optional>true</optional>
+    </dependency>
+
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-validator</artifactId>
+      <version>6.0.7.Final</version>
+      <optional>true</optional>
+    </dependency>
+
+    <!-- Test dependencies -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <!-- alibaba druid 数据库连接池 begin -->
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>druid</artifactId>
+    </dependency>
+    <!-- alibaba druid 数据库连接池 end -->
+
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>${mysql.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.mario.mario-parent</groupId>
+      <artifactId>mario-common</artifactId>
+    </dependency>
+  </dependencies>
+
+</project>
