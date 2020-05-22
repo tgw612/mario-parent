@@ -19,12 +19,11 @@ public class JdbcTemplate extends org.springframework.jdbc.core.JdbcTemplate {
     super(dataSource, lazyInit);
   }
 
-  public void setEnableJdbcTemplateUtil(boolean enable) {
-    if (enable) {
-      JdbcTemplateUtil.jdbcTemplate(this);
-    }
-
-  }
+//  public void setEnableJdbcTemplateUtil(boolean enable) {
+//    if (enable) {
+//      JdbcTemplateUtil.jdbcTemplate(this);
+//    }
+//  }
 
   @Override
   public <T> T queryForObject(String sql, Object[] args, RowMapper<T> rowMapper)

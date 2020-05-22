@@ -7,13 +7,13 @@
   <packaging>pom</packaging>
   <version>1.0.0-SNAPSHOT</version>
   <modelVersion>4.0.0</modelVersion>
+
   <modules>
     <module>mario-common-api</module>
     <module>mario-common</module>
-    <module>mario-task</module>
     <module>mario-jackson</module>
     <module>mario-mail</module>
-    <module>mario-redis</module>
+<!--    <module>mario-redis</module>-->
     <module>mario-security</module>
     <module>mario-security-autoconfigure</module>
     <module>mario-ali-search</module>
@@ -29,7 +29,6 @@
     <module>mario-rocketmq-ext-autoconfigure</module>
     <module>mario-elasticsearch</module>
     <module>mario-mongodb</module>
-    <module>mario-task</module>
     <module>mario-http</module>
     <module>mario-httpclient</module>
     <module>mario-reg</module>
@@ -40,7 +39,6 @@
     <module>mario-server</module>
     <module>mario-rds</module>
     <module>mario-dcdn</module>
-    <module>mario-json</module>
     <!-- ali 控制台demo -->
     <module>mario-ali</module>
     <!-- 依赖sibu-mall-common包 -->
@@ -56,11 +54,11 @@
     <maven.compiler.testTarget>1.8</maven.compiler.testTarget>
 
     <!-- plugins -->
-    <maven.compiler.plugin.version>3.1</maven.compiler.plugin.version>
+    <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
     <maven.surefire.plugin.version>2.17</maven.surefire.plugin.version>
-    <maven.jar.plugin.version>2.6</maven.jar.plugin.version>
-    <maven.source.plugin.version>2.2.1</maven.source.plugin.version>
-    <maven.resources.plugin.version>2.6</maven.resources.plugin.version>
+    <maven.jar.plugin.version>3.2.0</maven.jar.plugin.version>
+    <maven.source.plugin.version>3.2.1</maven.source.plugin.version>
+    <maven.resources.plugin.version>3.1.0</maven.resources.plugin.version>
     <maven.deploy.plugin.version>2.7</maven.deploy.plugin.version>
     <maven.war.plugin.version>2.4</maven.war.plugin.version>
 
@@ -163,19 +161,14 @@
       </dependency>
       <dependency>
         <groupId>com.mario.mario-parent</groupId>
-        <artifactId>mario-json</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.mario.mario-parent</groupId>
         <artifactId>mario-mail</artifactId>
         <version>${project.version}</version>
       </dependency>
-      <dependency>
-        <groupId>com.mario.mario-parent</groupId>
-        <artifactId>mario-redis</artifactId>
-        <version>${project.version}</version>
-      </dependency>
+<!--      <dependency>-->
+<!--        <groupId>com.mario.mario-parent</groupId>-->
+<!--        <artifactId>mario-redis</artifactId>-->
+<!--        <version>${project.version}</version>-->
+<!--      </dependency>-->
       <dependency>
         <groupId>com.mario.mario-parent</groupId>
         <artifactId>mario-security</artifactId>
@@ -238,11 +231,6 @@
       </dependency>
       <dependency>
         <groupId>com.mario.mario-parent</groupId>
-        <artifactId>mario-task</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.mario.mario-parent</groupId>
         <artifactId>mario-http</artifactId>
         <version>${project.version}</version>
       </dependency>
@@ -271,21 +259,21 @@
         <artifactId>mario-reg</artifactId>
         <version>${project.version}</version>
       </dependency>
-<!--      <dependency>-->
-<!--        <groupId>com.mario.mario-parent</groupId>-->
-<!--        <artifactId>mario-reg-api</artifactId>-->
-<!--        <version>${project.version}</version>-->
-<!--      </dependency>-->
-<!--      <dependency>-->
-<!--        <groupId>com.mario.mario-parent</groupId>-->
-<!--        <artifactId>mario-reg-zookeeper-curator</artifactId>-->
-<!--        <version>${project.version}</version>-->
-<!--      </dependency>-->
-<!--      <dependency>-->
-<!--        <groupId>com.mario.mario-parent</groupId>-->
-<!--        <artifactId>mario-reg-zookeeper-curator-autoconfigure</artifactId>-->
-<!--        <version>${project.version}</version>-->
-<!--      </dependency>-->
+      <!--      <dependency>-->
+      <!--        <groupId>com.mario.mario-parent</groupId>-->
+      <!--        <artifactId>mario-reg-api</artifactId>-->
+      <!--        <version>${project.version}</version>-->
+      <!--      </dependency>-->
+      <!--      <dependency>-->
+      <!--        <groupId>com.mario.mario-parent</groupId>-->
+      <!--        <artifactId>mario-reg-zookeeper-curator</artifactId>-->
+      <!--        <version>${project.version}</version>-->
+      <!--      </dependency>-->
+      <!--      <dependency>-->
+      <!--        <groupId>com.mario.mario-parent</groupId>-->
+      <!--        <artifactId>mario-reg-zookeeper-curator-autoconfigure</artifactId>-->
+      <!--        <version>${project.version}</version>-->
+      <!--      </dependency>-->
       <dependency>
         <groupId>com.mario.mario-parent</groupId>
         <artifactId>mario-mysql</artifactId>
@@ -311,16 +299,16 @@
         <artifactId>mario-server</artifactId>
         <version>${project.version}</version>
       </dependency>
-<!--      <dependency>-->
-<!--        <groupId>com.mario.mario-parent</groupId>-->
-<!--        <artifactId>mario-server-http</artifactId>-->
-<!--        <version>${project.version}</version>-->
-<!--      </dependency>-->
-<!--      <dependency>-->
-<!--        <groupId>com.mario.mario-parent</groupId>-->
-<!--        <artifactId>mario-server-http-spring</artifactId>-->
-<!--        <version>${project.version}</version>-->
-<!--      </dependency>-->
+      <!--      <dependency>-->
+      <!--        <groupId>com.mario.mario-parent</groupId>-->
+      <!--        <artifactId>mario-server-http</artifactId>-->
+      <!--        <version>${project.version}</version>-->
+      <!--      </dependency>-->
+      <!--      <dependency>-->
+      <!--        <groupId>com.mario.mario-parent</groupId>-->
+      <!--        <artifactId>mario-server-http-spring</artifactId>-->
+      <!--        <version>${project.version}</version>-->
+      <!--      </dependency>-->
       <dependency>
         <groupId>com.mario.mario-parent</groupId>
         <artifactId>mario-ahas-autoconfigure</artifactId>
@@ -484,11 +472,11 @@
       </dependency>
       <!--json related end -->
       <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-xml -->
-<!--      <dependency>-->
-<!--        <groupId>com.fasterxml.jackson.dataformat</groupId>-->
-<!--        <artifactId>jackson-dataformat-xml</artifactId>-->
-<!--        <version>2.10.3</version>-->
-<!--      </dependency>-->
+      <!--      <dependency>-->
+      <!--        <groupId>com.fasterxml.jackson.dataformat</groupId>-->
+      <!--        <artifactId>jackson-dataformat-xml</artifactId>-->
+      <!--        <version>2.10.3</version>-->
+      <!--      </dependency>-->
       <!--json related end -->
 
       <!-- spring related start -->
@@ -530,23 +518,23 @@
       <!-- spring related end -->
 
       <!-- JSP Support start -->
-<!--      <dependency>-->
-<!--        <groupId>javax.servlet</groupId>-->
-<!--        <artifactId>javax.servlet-api</artifactId>-->
-<!--        <version>${javax.servlet.api.version}</version>-->
-<!--      </dependency>-->
+      <!--      <dependency>-->
+      <!--        <groupId>javax.servlet</groupId>-->
+      <!--        <artifactId>javax.servlet-api</artifactId>-->
+      <!--        <version>${javax.servlet.api.version}</version>-->
+      <!--      </dependency>-->
 
-<!--      <dependency>-->
-<!--        <groupId>javax.servlet</groupId>-->
-<!--        <artifactId>jstl</artifactId>-->
-<!--        <version>${jstl.version}</version>-->
-<!--      </dependency>-->
+      <!--      <dependency>-->
+      <!--        <groupId>javax.servlet</groupId>-->
+      <!--        <artifactId>jstl</artifactId>-->
+      <!--        <version>${jstl.version}</version>-->
+      <!--      </dependency>-->
 
-<!--      <dependency>-->
-<!--        <groupId>javax.servlet.jsp</groupId>-->
-<!--        <artifactId>javax.servlet.jsp-api</artifactId>-->
-<!--        <version>${javax.servlet.jsp.version}</version>-->
-<!--      </dependency>-->
+      <!--      <dependency>-->
+      <!--        <groupId>javax.servlet.jsp</groupId>-->
+      <!--        <artifactId>javax.servlet.jsp-api</artifactId>-->
+      <!--        <version>${javax.servlet.jsp.version}</version>-->
+      <!--      </dependency>-->
       <!-- JSP Support end -->
 
       <dependency>
@@ -588,11 +576,11 @@
       <!-- mail end-->
 
       <!-- mongodb java driver start-->
-<!--      <dependency>-->
-<!--        <groupId>org.mongodb</groupId>-->
-<!--        <artifactId>mongo-java-driver</artifactId>-->
-<!--        <version>${mongo-java-driver.version}</version>-->
-<!--      </dependency>-->
+      <!--      <dependency>-->
+      <!--        <groupId>org.mongodb</groupId>-->
+      <!--        <artifactId>mongo-java-driver</artifactId>-->
+      <!--        <version>${mongo-java-driver.version}</version>-->
+      <!--      </dependency>-->
       <!-- mongodb java driver end-->
 
       <!-- spring mongodb start -->
@@ -758,11 +746,11 @@
         <scope>test</scope>
       </dependency>
       <!-- 性能测试 -->
-<!--      <dependency>-->
-<!--        <groupId>org.databene</groupId>-->
-<!--        <artifactId>contiperf</artifactId>-->
-<!--        <version>2.2.0</version>-->
-<!--      </dependency>-->
+      <!--      <dependency>-->
+      <!--        <groupId>org.databene</groupId>-->
+      <!--        <artifactId>contiperf</artifactId>-->
+      <!--        <version>2.2.0</version>-->
+      <!--      </dependency>-->
       <!--test related begin -->
       <dependency>
         <groupId>org.mockito</groupId>
@@ -777,6 +765,14 @@
   <build>
     <pluginManagement>
       <plugins>
+        <plugin>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-maven-plugin</artifactId>
+          <version>2.3.0.RELEASE</version>
+          <configuration>
+            <skip>true</skip>
+          </configuration>
+        </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
@@ -809,10 +805,17 @@
         </plugin>
       </plugins>
     </pluginManagement>
+
     <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <version>2.3.0.RELEASE</version>
+      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
         <configuration>
           <source>1.8</source>
           <target>1.8</target>
@@ -824,6 +827,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0-M4</version>
         <configuration>
           <argLine>-Xmx1024m -XX:PermSize=256m -XX:MaxPermSize=256m</argLine>
           <includes>
@@ -834,102 +838,58 @@
           <skip>true</skip>
         </configuration>
       </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jar-plugin</artifactId>
-        <executions>
-          <execution>
-            <phase>package</phase>
-            <goals>
-              <goal>jar</goal>
-            </goals>
-            <configuration>
-              <excludes>
-                <exclude>**/test/*.class</exclude>
-              </excludes>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-source-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>attach-sources</id>
-            <phase>install</phase>
-            <goals>
-              <goal>jar-no-fork</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-resources-plugin</artifactId>
-        <configuration>
-          <encoding>UTF-8</encoding>
-        </configuration>
-      </plugin>
+      <!--      <plugin>-->
+      <!--        <groupId>org.apache.maven.plugins</groupId>-->
+      <!--        <artifactId>maven-jar-plugin</artifactId>-->
+      <!--        <version>3.2.0</version>-->
+      <!--        <executions>-->
+      <!--          <execution>-->
+      <!--            <phase>package</phase>-->
+      <!--            <goals>-->
+      <!--              <goal>jar</goal>-->
+      <!--            </goals>-->
+      <!--            <configuration>-->
+      <!--              <excludes>-->
+      <!--                <exclude>**/test/*.class</exclude>-->
+      <!--              </excludes>-->
+      <!--            </configuration>-->
+      <!--          </execution>-->
+      <!--        </executions>-->
+      <!--      </plugin>-->
+      <!--      <plugin>-->
+      <!--        <groupId>org.apache.maven.plugins</groupId>-->
+      <!--        <artifactId>maven-source-plugin</artifactId>-->
+      <!--        <version>3.2.1</version>-->
+      <!--        <executions>-->
+      <!--          <execution>-->
+      <!--            <id>attach-sources</id>-->
+      <!--            <phase>install</phase>-->
+      <!--            <goals>-->
+      <!--              <goal>jar-no-fork</goal>-->
+      <!--            </goals>-->
+      <!--          </execution>-->
+      <!--        </executions>-->
+      <!--      </plugin>-->
+      <!--      <plugin>-->
+      <!--        <groupId>org.apache.maven.plugins</groupId>-->
+      <!--        <artifactId>maven-resources-plugin</artifactId>-->
+      <!--        <version>3.1.0</version>-->
+      <!--        <configuration>-->
+      <!--          <encoding>UTF-8</encoding>-->
+      <!--        </configuration>-->
+      <!--      </plugin>-->
     </plugins>
   </build>
-
-  <repositories>
-    <repository>
-      <id>tdn-nexus</id>
-      <name>tdn-nexus</name>
-      <!-- tdn-->
-      <url>http://47.97.160.249:8081/repository/maven-public/</url>
-      <!-- sibu 内网-->
-      <!--<url>http://172.16.0.73:8081/nexus/content/repositories/public/</url>-->
-      <!-- sibu 外网-->
-      <!--<url>http://183.6.150.110:8081/nexus/content/repositories/public/</url>-->
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </repository>
-  </repositories>
-  <pluginRepositories>
-    <pluginRepository>
-      <id>tdn-nexus</id>
-      <name>tdn-nexus</name>
-      <!-- tdn-->
-      <url>http://47.97.160.249:8081/repository/maven-public/</url>
-      <!-- sibu 内网-->
-      <!--<url>http://172.16.0.73:8081/nexus/content/repositories/public/</url>-->
-      <!-- sibu 外网-->
-      <!--<url>http://183.6.150.110:8081/nexus/content/repositories/public/</url>-->
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </pluginRepository>
-  </pluginRepositories>
   <distributionManagement>
     <repository>
-      <id>tdn-nexus</id>
-      <name>Nexus Release Repository</name>
-      <!-- tdn-->
-      <url>http://47.97.160.249:8081/repository/maven-releases/</url>
-      <!-- sibu 内网-->
-      <!--<url>http://172.16.0.73:8081/nexus/content/repositories/releases/</url>-->
-      <!-- sibu 外网-->
-      <!--<url>http://183.6.150.110:8081/nexus/content/repositories/releases/</url>-->
+      <id>maven-releases</id>
+      <name>user release resp</name>
+      <url>http://127.0.0.1:8081/repository/maven-releases/</url>
     </repository>
     <snapshotRepository>
-      <id>tdn-nexus</id>
-      <name>Nexus Snapshot Repository</name>
-      <!-- tdn-->
-      <url>http://47.97.160.249:8081/repository/maven-snapshots/</url>
-      <!-- sibu 内网-->
-      <!--<url>http://172.16.0.73:8081/nexus/content/repositories/snapshots/</url>-->
-      <!-- sibu 外网-->
-      <!--<url>http://183.6.150.110:8081/nexus/content/repositories/snapshots/</url>-->
+      <id>maven-snapshots</id>
+      <name>user snapshots resp</name>
+      <url>http://127.0.0.1:8081/repository/maven-snapshots/</url>
     </snapshotRepository>
   </distributionManagement>
 </project>

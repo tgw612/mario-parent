@@ -6,21 +6,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="mario-reg" />
-        <module name="mario-rocketmq-example" />
         <module name="mario-mongodb" />
         <module name="mario-elasticsearch" />
-        <module name="mario-dcdn" />
+        <module name="mario-cmq" />
         <module name="mario-httpclient" />
         <module name="mario-ahas-autoconfigure" />
         <module name="mario-mail" />
         <module name="mario-http" />
-        <module name="mario-redis" />
+        <module name="mario-common-api" />
         <module name="mario-ali-mq" />
         <module name="mario-ali-search" />
+        <module name="mario-dcdn" />
         <module name="mario-ali-rocketmq" />
         <module name="mario-healthcheck-autoconfigure" />
-        <module name="mario-common-api" />
+        <module name="mario-rocketmq-example" />
         <module name="mario-cmq-ext" />
         <module name="mario-mysql" />
         <module name="mario-security-autoconfigure" />
@@ -31,7 +30,7 @@
         <module name="mario-security" />
         <module name="mario-rds" />
         <module name="mario-ali-mq-autoconfigure" />
-        <module name="mario-cmq" />
+        <module name="mario-reg" />
         <module name="mario-rocketmq-ext-autoconfigure" />
         <module name="mario-cmq-example" />
         <module name="mario-trace" />
@@ -47,6 +46,7 @@
       <module name="mario-json" target="1.8" />
       <module name="mario-mq" target="1.8" />
       <module name="mario-persistence" target="1.8" />
+      <module name="mario-redis" target="1.8" />
       <module name="mario-service" target="1.8" />
       <module name="mario-service-api" target="1.8" />
       <module name="mario-task" target="1.8" />
