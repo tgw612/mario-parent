@@ -1,11 +1,10 @@
 package com.mario.shardingjdbc.autoconfigure.core.algorithms;
 
-import com.mario.common.exception.ServiceException;
-import com.mario.common.interfaces.StringHashCoding;
+import com.mario.common.exception.SystemException;
+import com.mario.shardingjdbc.autoconfigure.core.interfaces.StringHashCoding;
 import org.apache.commons.lang3.StringUtils;
 
 public class ShardingDBAlgorithms {
-
   private static StringHashCoding dataBaseHashCoding;
 
   public ShardingDBAlgorithms() {
@@ -22,7 +21,7 @@ public class ShardingDBAlgorithms {
   public static Integer getRealNode(Object identity) {
     String s = String.valueOf(identity);
     if (StringUtils.isBlank(s)) {
-      throw new ServiceException("通过分库负载均衡一致性算法获取真实节点数时，identity 不能为null 或空字符串!");
+      throw new SystemException("通过分库负载均衡一致性算法获取真实节点数时，identity 不能为null 或空字符串!");
     } else {
       return dataBaseHashCoding.hashFor(s);
     }

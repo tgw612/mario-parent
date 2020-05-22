@@ -12,8 +12,8 @@
 
   <artifactId>mario-common-api</artifactId>
   <packaging>jar</packaging>
+
   <dependencies>
-    <!--validation begin-->
     <dependency>
       <groupId>javax.validation</groupId>
       <artifactId>validation-api</artifactId>

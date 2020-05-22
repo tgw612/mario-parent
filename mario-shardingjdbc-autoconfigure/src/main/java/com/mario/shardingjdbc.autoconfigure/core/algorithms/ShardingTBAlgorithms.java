@@ -1,11 +1,10 @@
 package com.mario.shardingjdbc.autoconfigure.core.algorithms;
 
 import com.mario.common.exception.SystemException;
-import com.mario.common.interfaces.StringHashCoding;
+import com.mario.shardingjdbc.autoconfigure.core.interfaces.StringHashCoding;
 import org.apache.commons.lang3.StringUtils;
 
 public class ShardingTBAlgorithms {
-
   private static StringHashCoding tableHashCoding;
 
   public ShardingTBAlgorithms() {

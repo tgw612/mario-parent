@@ -11,16 +11,6 @@
         <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
-    <option name="ignoredFiles">
-      <set>
-        <option value="$PROJECT_DIR$/mario-json/pom.xml" />
-        <option value="$PROJECT_DIR$/mario-mq/pom.xml" />
-        <option value="$PROJECT_DIR$/mario-persistence/pom.xml" />
-        <option value="$PROJECT_DIR$/mario-service-api/pom.xml" />
-        <option value="$PROJECT_DIR$/mario-task/pom.xml" />
-        <option value="$PROJECT_DIR$/mario-web/pom.xml" />
-      </set>
-    </option>
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />

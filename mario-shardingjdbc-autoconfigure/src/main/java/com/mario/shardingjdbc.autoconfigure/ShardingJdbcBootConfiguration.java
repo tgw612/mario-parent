@@ -4,12 +4,12 @@ import com.google.common.base.Preconditions;
 import com.mario.common.util.CollectionUtil;
 import com.mario.common.util.SpringBootPropertyUtil;
 import com.mario.common.util.StringUtil;
+import com.mario.shardingjdbc.autoconfigure.core.properties.SpringBootMasterSlaveRuleConfigurationProperties;
+import com.mario.shardingjdbc.autoconfigure.core.properties.SpringBootShardingRuleConfigurationProperties;
 import io.shardingsphere.api.algorithm.masterslave.RoundRobinMasterSlaveLoadBalanceAlgorithm;
 import io.shardingsphere.api.config.MasterSlaveRuleConfiguration;
 import io.shardingsphere.core.exception.ShardingException;
 import io.shardingsphere.core.util.InlineExpressionParser;
-import io.shardingsphere.shardingjdbc.spring.boot.masterslave.SpringBootMasterSlaveRuleConfigurationProperties;
-import io.shardingsphere.shardingjdbc.spring.boot.sharding.SpringBootShardingRuleConfigurationProperties;
 import io.shardingsphere.shardingjdbc.util.DataSourceUtil;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -99,7 +99,7 @@ public class ShardingJdbcBootConfiguration implements EnvironmentAware, Disposab
    * @return
    * @throws Exception
    */
-  @Bean(destroyMethod = "close")
+  @Bean
   public DataSource dataSource(@Nullable ObjectProvider<DataSourceWrapper> dataSourceWrapper)
       throws Exception {
     DataSource dataSource = createDataSource();
@@ -253,6 +253,8 @@ public class ShardingJdbcBootConfiguration implements EnvironmentAware, Disposab
         if (log.isWarnEnabled()) {
           log.warn("Not found key[{}] from Environment!!", key);
         }
+      } else {
+//        throw ex;
       }
     }
     return null;

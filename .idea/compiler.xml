@@ -10,10 +10,10 @@
         <module name="mario-elasticsearch" />
         <module name="mario-cmq" />
         <module name="mario-httpclient" />
+        <module name="mario-cmq-example" />
         <module name="mario-ahas-autoconfigure" />
         <module name="mario-mail" />
         <module name="mario-http" />
-        <module name="mario-common-api" />
         <module name="mario-ali-mq" />
         <module name="mario-ali-search" />
         <module name="mario-dcdn" />
@@ -32,13 +32,18 @@
         <module name="mario-ali-mq-autoconfigure" />
         <module name="mario-reg" />
         <module name="mario-rocketmq-ext-autoconfigure" />
-        <module name="mario-cmq-example" />
-        <module name="mario-trace" />
         <module name="mario-rocketmq-ext" />
+        <module name="mario-trace" />
         <module name="mario-shardingjdbc-autoconfigure" />
         <module name="mario-server" />
         <module name="mario-jdbc" />
         <module name="mario-boot-autoimport" />
+      </profile>
+      <profile name="Annotation profile for mario-parent" enabled="true">
+        <sourceOutputDir name="../mario-common/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../mario-common/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="mario-common-api" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

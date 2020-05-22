@@ -4,7 +4,7 @@ import static com.google.common.base.Preconditions.checkArgument;
 
 import com.google.common.hash.HashFunction;
 import com.google.common.hash.Hashing;
-import com.mario.common.interfaces.StringHashCoding;
+import com.mario.shardingjdbc.autoconfigure.core.interfaces.StringHashCoding;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.SortedMap;
@@ -13,7 +13,6 @@ import java.util.concurrent.atomic.LongAdder;
 import lombok.Getter;
 
 public class StringConsistentHashCoding implements StringHashCoding {
-
   @Getter
   private int realNodeCount;
   @Getter
