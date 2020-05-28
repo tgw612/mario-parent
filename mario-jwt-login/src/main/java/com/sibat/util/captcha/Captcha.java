@@ -1,12 +1,11 @@
 package com.sibat.util.captcha;
 
-import javax.imageio.ImageIO;
-import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.Random;
+import javax.imageio.ImageIO;
 
 /**
  * 验证码生成器

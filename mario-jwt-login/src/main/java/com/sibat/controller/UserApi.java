@@ -5,17 +5,11 @@ import com.sibat.domain.User;
 import com.sibat.domain.UserRepository;
 import com.sibat.util.Response;
 import com.sibat.util.captcha.HashUtil;
-import com.sibat.util.jwt.Jwt;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.security.NoSuchAlgorithmException;
-import java.security.Principal;
 
 /**
  * Created by tgw61 on 2017/7/17.

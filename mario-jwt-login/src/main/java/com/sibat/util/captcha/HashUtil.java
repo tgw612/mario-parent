@@ -1,11 +1,10 @@
 package com.sibat.util.captcha;
 
 import com.sibat.util.jwt.Jwt;
-import org.apache.log4j.Logger;
-
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Random;
+import org.apache.log4j.Logger;
 
 public class HashUtil {
 	private static Logger log = Logger.getLogger(HashUtil.class);

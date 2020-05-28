@@ -1,12 +1,10 @@
 package com.sibat.util;
 
-import com.sibat.domain.VerifyCodeRepository;
 import com.sibat.domain.VerifyCode;
+import com.sibat.domain.VerifyCodeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
-
-import java.util.*;
 
 /**
  * Created by tgw on 2017/2/22.

@@ -1,6 +1,5 @@
 package com.sibat.util.captcha;
 
-import java.awt.*;
 import java.io.ByteArrayInputStream;
 import java.net.URL;
 

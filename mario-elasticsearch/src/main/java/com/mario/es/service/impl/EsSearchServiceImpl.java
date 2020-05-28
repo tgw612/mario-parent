@@ -1,7 +1,5 @@
 package com.mario.es.service.impl;
 
-import org.elasticsearch.common.xcontent.XContentFactory.jsonBuilder;
-
 import com.alibaba.fastjson.JSONObject;
 import com.mario.es.exception.CustomSearchException;
 import com.mario.es.model.EsQuery;
@@ -25,6 +23,7 @@ import org.elasticsearch.client.transport.TransportClient;
 import org.elasticsearch.common.geo.GeoDistance;
 import org.elasticsearch.common.unit.DistanceUnit;
 import org.elasticsearch.common.xcontent.XContentBuilder;
+import org.elasticsearch.common.xcontent.XContentFactory.jsonBuilder;
 import org.elasticsearch.index.query.BoolQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
