@@ -65,11 +65,9 @@ public class RedisClusterConfigurationFactoryBean implements FactoryBean<RedisCl
           if (!var7.hasNext()) {
             return sentinelHosts;
           }
-
           String host = (String) var7.next();
           isIpPort = this.p.matcher(host).matches();
         } while (isIpPort);
-
         log.error("解析 jedis clusterHosts[ip 或 port] 不合法");
         throw new IllegalArgumentException("解析 jedis clusterHosts[ip 或 port] 不合法");
       }

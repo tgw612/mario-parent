@@ -13,6 +13,7 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
@@ -89,7 +90,7 @@ public class LoadDataInFileMySqlNode<T> {
     this.fieldsTerminatedBy = fieldsTerminatedBy;
     this.linesTerminatedBy = linesTerminatedBy;
     this.ignore = ignore;
-    if (StringUtil.isNotBlank(dataFormatPattern)) {
+    if (StringUtils.isNotBlank(dataFormatPattern)) {
       this.dataFormatPattern = dataFormatPattern;
     } else {
       this.dataFormatPattern = "yyyy-MM-dd HH:mm:ss";

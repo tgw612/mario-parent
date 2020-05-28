@@ -18,7 +18,15 @@
       <groupId>com.alicp.jetcache</groupId>
       <artifactId>jetcache-starter-redis-lettuce</artifactId>
     </dependency>
-
+    <!--redisson-->
+    <dependency>
+      <groupId>org.redisson</groupId>
+      <artifactId>redisson</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.alicp.jetcache</groupId>
+      <artifactId>jetcache-starter-redis-lettuce</artifactId>
+    </dependency>
     <dependency>
       <groupId>io.lettuce</groupId>
       <artifactId>lettuce-core</artifactId>
@@ -27,35 +35,13 @@
       <groupId>com.mario.mario-parent</groupId>
       <artifactId>mario-common</artifactId>
     </dependency>
-
-    <!-- redis begin -->
     <dependency>
-      <groupId>redis.clients</groupId>
-      <artifactId>jedis</artifactId>
-      <exclusions>
-        <exclusion>
-          <groupId>org.apache.commons</groupId>
-          <artifactId>commons-pool2</artifactId>
-        </exclusion>
-      </exclusions>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-redis</artifactId>
     </dependency>
-
-    <!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-redis -->
-    <dependency>
-      <groupId>org.springframework.data</groupId>
-      <artifactId>spring-data-redis</artifactId>
-      <exclusions>
-        <exclusion>
-          <groupId>org.apache.commons</groupId>
-          <artifactId>commons-pool2</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <!--redis end -->
-
-    <dependency>
-      <groupId>org.apache.commons</groupId>
-      <artifactId>commons-pool2</artifactId>
-    </dependency>
+<!--    <dependency>-->
+    <!--      <groupId>org.apache.commons</groupId>-->
+    <!--      <artifactId>commons-pool2</artifactId>-->
+    <!--    </dependency>-->
   </dependencies>
 </project>

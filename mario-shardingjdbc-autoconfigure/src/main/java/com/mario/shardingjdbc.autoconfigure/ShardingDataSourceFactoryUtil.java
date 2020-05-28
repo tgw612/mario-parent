@@ -1,5 +1,6 @@
 package com.mario.shardingjdbc.autoconfigure;
 
+import com.mario.shardingjdbc.autoconfigure.core.CustomShardingDataSourceFactory;
 import com.mario.shardingjdbc.autoconfigure.core.properties.CustomShardingProperties;
 import com.mario.shardingjdbc.autoconfigure.core.properties.CustomShardingPropertiesConstant;
 import com.mario.shardingjdbc.autoconfigure.core.properties.SpringBootShardingRuleConfigurationProperties;
@@ -26,7 +27,8 @@ public class ShardingDataSourceFactoryUtil {
         int executorSize = customShardingProperties.getValue(CustomShardingPropertiesConstant.EXECUTOR_SIZE);
         if (executorSize > 0) {//如果大于0
             //ShardingDataSourceFactory 增加了队列大小
-            return CustomShardingDataSourceFactory.createDataSource(dataSourceMap, shardingRuleConfig, shardingProperties.getConfigMap(), shardingProperties.getProps());
+            return CustomShardingDataSourceFactory
+                .createDataSource(dataSourceMap, shardingRuleConfig, shardingProperties.getConfigMap(), shardingProperties.getProps());
         } else {
             //原逻辑
             return ShardingDataSourceFactory.createDataSource(dataSourceMap, shardingRuleConfig, shardingProperties.getConfigMap(), shardingProperties.getProps());

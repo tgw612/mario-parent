@@ -6,55 +6,54 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="mario-mongodb" />
-        <module name="mario-elasticsearch" />
-        <module name="mario-cmq" />
-        <module name="mario-httpclient" />
-        <module name="mario-cmq-example" />
-        <module name="mario-ahas-autoconfigure" />
-        <module name="mario-mail" />
-        <module name="mario-http" />
         <module name="mario-ali-mq" />
-        <module name="mario-ali-search" />
-        <module name="mario-dcdn" />
-        <module name="mario-ali-rocketmq" />
-        <module name="mario-healthcheck-autoconfigure" />
-        <module name="mario-rocketmq-example" />
-        <module name="mario-cmq-ext" />
-        <module name="mario-mysql" />
-        <module name="mario-security-autoconfigure" />
-        <module name="mario-jackson" />
-        <module name="mario-ali" />
-        <module name="mario-rocketmq" />
         <module name="mario-common" />
-        <module name="mario-security" />
-        <module name="mario-rds" />
-        <module name="mario-ali-mq-autoconfigure" />
-        <module name="mario-reg" />
-        <module name="mario-rocketmq-ext-autoconfigure" />
-        <module name="mario-rocketmq-ext" />
-        <module name="mario-trace" />
-        <module name="mario-shardingjdbc-autoconfigure" />
-        <module name="mario-server" />
-        <module name="mario-jdbc" />
-        <module name="mario-boot-autoimport" />
-      </profile>
-      <profile name="Annotation profile for mario-parent" enabled="true">
-        <sourceOutputDir name="../mario-common/target/generated-sources/annotations" />
-        <sourceTestOutputDir name="../mario-common/target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
+        <module name="mario-ali-rocketmq" />
         <module name="mario-common-api" />
+        <module name="mario-relation" />
+        <module name="mario-mysql" />
+        <module name="mario-ali-mq-autoconfigure" />
+        <module name="mario-security" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="mario" target="1.8" />
+      <module name="mario-ahas-autoconfigure" target="1.8" />
+      <module name="mario-ali" target="1.8" />
+      <module name="mario-ali-search" target="1.8" />
+      <module name="mario-boot-autoimport" target="1.8" />
+      <module name="mario-cmq" target="1.8" />
+      <module name="mario-cmq-example" target="1.8" />
+      <module name="mario-cmq-ext" target="1.8" />
+      <module name="mario-common-api (1)" target="1.8" />
+      <module name="mario-dcdn" target="1.8" />
+      <module name="mario-elasticsearch" target="1.8" />
+      <module name="mario-healthcheck-autoconfigure" target="1.8" />
+      <module name="mario-http" target="1.8" />
+      <module name="mario-httpclient" target="1.8" />
+      <module name="mario-jackson" target="1.8" />
+      <module name="mario-jdbc" target="1.8" />
       <module name="mario-json" target="1.8" />
+      <module name="mario-jwt-login" target="1.8" />
+      <module name="mario-leancloud" target="1.8" />
+      <module name="mario-mail" target="1.8" />
+      <module name="mario-mongodb" target="1.8" />
       <module name="mario-mq" target="1.8" />
       <module name="mario-persistence" target="1.8" />
+      <module name="mario-rds" target="1.8" />
       <module name="mario-redis" target="1.8" />
+      <module name="mario-reg" target="1.8" />
+      <module name="mario-rocketmq" target="1.8" />
+      <module name="mario-rocketmq-example" target="1.8" />
+      <module name="mario-rocketmq-ext" target="1.8" />
+      <module name="mario-rocketmq-ext-autoconfigure" target="1.8" />
+      <module name="mario-security-autoconfigure" target="1.8" />
+      <module name="mario-server" target="1.8" />
       <module name="mario-service" target="1.8" />
       <module name="mario-service-api" target="1.8" />
+      <module name="mario-shardingjdbc-autoconfigure" target="1.8" />
       <module name="mario-task" target="1.8" />
+      <module name="mario-trace" target="1.8" />
       <module name="mario-web" target="1.8" />
     </bytecodeTargetLevel>
   </component>

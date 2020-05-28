@@ -1,6 +1,6 @@
 package com.mario.es.service.impl;
 
-import static org.elasticsearch.common.xcontent.XContentFactory.jsonBuilder;
+import org.elasticsearch.common.xcontent.XContentFactory.jsonBuilder;
 
 import com.alibaba.fastjson.JSONObject;
 import com.mario.es.exception.CustomSearchException;

@@ -11,40 +11,49 @@
   <modules>
     <module>mario-common-api</module>
     <module>mario-common</module>
-    <module>mario-jackson</module>
-    <module>mario-mail</module>
-<!--    <module>mario-redis</module>-->
-    <module>mario-security</module>
-    <module>mario-security-autoconfigure</module>
-    <module>mario-ali-search</module>
-    <module>mario-cmq</module>
-    <module>mario-cmq-example</module>
-    <module>mario-cmq-ext</module>
     <module>mario-ali-rocketmq</module>
     <module>mario-ali-mq</module>
     <module>mario-ali-mq-autoconfigure</module>
-    <module>mario-rocketmq</module>
-    <module>mario-rocketmq-example</module>
-    <module>mario-rocketmq-ext</module>
-    <module>mario-rocketmq-ext-autoconfigure</module>
-    <module>mario-elasticsearch</module>
-    <module>mario-mongodb</module>
-    <module>mario-http</module>
-    <module>mario-httpclient</module>
-    <module>mario-reg</module>
     <module>mario-mysql</module>
-    <module>mario-jdbc</module>
     <module>mario-shardingjdbc-autoconfigure</module>
-    <module>mario-boot-autoimport</module>
-    <module>mario-server</module>
-    <module>mario-rds</module>
-    <module>mario-dcdn</module>
-    <!-- ali 控制台demo -->
-    <module>mario-ali</module>
-    <!-- 依赖sibu-mall-common包 -->
-    <module>mario-ahas-autoconfigure</module>
-    <module>mario-trace</module>
-    <module>mario-healthcheck-autoconfigure</module>
+    <module>mario-relation</module>
+<!--    <module>mario-redis</module>-->
+    <!--  -->
+    <!--    <module>mario-jackson</module>-->
+    <!--    <module>mario-jwt-login</module>-->
+    <!--    <module>mario-wechat-login</module>-->
+    <!--    <module>mario-leancloud</module>-->
+
+    <!--    <module>mario-pay</module>-->
+    <!--    <module>mario-mail</module>-->
+    <!--&lt;!&ndash;    <module>mario-redis</module>&ndash;&gt;-->
+    <module>mario-security</module>
+    <!--    <module>mario-security-autoconfigure</module>-->
+    <!--    <module>mario-ali-search</module>-->
+    <!--    <module>mario-cmq</module>-->
+    <!--    <module>mario-cmq-example</module>-->
+    <!--    <module>mario-cmq-ext</module>-->
+
+    <!--    <module>mario-elasticsearch</module>-->
+    <!--    <module>mario-mongodb</module>-->
+    <!--    <module>mario-http</module>-->
+    <!--    <module>mario-httpclient</module>-->
+    <!--    <module>mario-reg</module>-->
+
+    <!--    <module>mario-boot-autoimport</module>-->
+    <!--    <module>mario-server</module>-->
+    <!--    <module>mario-rds</module>-->
+    <!--    <module>mario-dcdn</module>-->
+    <!--    &lt;!&ndash; ali 控制台demo &ndash;&gt;-->
+    <!--    <module>mario-ali</module>-->
+    <!--    &lt;!&ndash; 依赖sibu-mall-common包 &ndash;&gt;-->
+    <!--    <module>mario-ahas-autoconfigure</module>-->
+    <!--    废弃 -->
+    <!--<module>mario-trace</module>
+    <module>mario-rocketmq-example</module>&ndash;&gt;-->
+    <!--    <module>mario-rocketmq-ext</module>-->
+    <!--    <module>mario-rocketmq-ext-autoconfigure</module>-->
+    <!--    <module>mario-healthcheck-autoconfigure</module>-->
   </modules>
 
   <properties>
@@ -52,8 +61,8 @@
     <maven.compiler.target>1.8</maven.compiler.target>
     <maven.compiler.testSource>1.8</maven.compiler.testSource>
     <maven.compiler.testTarget>1.8</maven.compiler.testTarget>
-
     <!-- plugins -->
+    <project.version>1.0.0-SNAPSHOT</project.version>
     <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
     <maven.surefire.plugin.version>2.17</maven.surefire.plugin.version>
     <maven.jar.plugin.version>3.2.0</maven.jar.plugin.version>
@@ -62,9 +71,7 @@
     <maven.deploy.plugin.version>2.7</maven.deploy.plugin.version>
     <maven.war.plugin.version>2.4</maven.war.plugin.version>
 
-    <!-- 2.0.5.RELEASE -->
     <spring-boot.version>2.1.1.RELEASE</spring-boot.version>
-
     <spring.version>5.1.3.RELEASE</spring.version>
     <spring-data-redis.version>2.0.2.RELEASE</spring-data-redis.version>
 
@@ -79,7 +86,6 @@
     <joda.time.version>2.9.9</joda.time.version>
     <slf4j.version>1.7.24</slf4j.version>
     <protostuff.version>1.1.3</protostuff.version>
-
     <!-- mongodb start -->
     <spring-data-mongodb.version>2.1.3.RELEASE</spring-data-mongodb.version>
     <mongo-java-driver.version>3.12.4</mongo-java-driver.version>
@@ -104,31 +110,22 @@
 
     <!-- elasticsearch client -->
     <elasticsearch.client.version>6.2.3</elasticsearch.client.version>
-
     <mail.version>1.5.0-b01</mail.version>
-
     <httpclient.version>4.5.3</httpclient.version>
-
     <rocketmq-client.version>4.2.0</rocketmq-client.version>
-
     <guava.version>23.0</guava.version>
-
     <commons-cli.version>1.3.1</commons-cli.version>
     <!-- test -->
     <junit.version>4.12</junit.version>
     <testng.version>6.9.10</testng.version>
     <!-- 性能测试 -->
     <contiperf.version>2.2.0</contiperf.version>
-
     <mockito.version>1.10.19</mockito.version>
     <jetcache.version>2.5.9</jetcache.version>
     <lettuce.version>5.1.0.RELEASE</lettuce.version>
     <curator.version>2.12.0</curator.version>
-
     <mysql.version>5.1.40</mysql.version>
-    <!-- 官方文档：https://github.com/alibaba/druid/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98 -->
     <druid.version>1.1.10</druid.version>
-
     <sharding-sphere.version>3.0.0</sharding-sphere.version>
     <mybatis.version>3.4.6</mybatis.version>
   </properties>
@@ -142,7 +139,11 @@
 
   <dependencyManagement>
     <dependencies>
-
+      <dependency>
+        <groupId>com.mario.mario-parent</groupId>
+        <artifactId>mario-relation</artifactId>
+        <version>${project.version}</version>
+      </dependency>
       <!-- local dependency start  -->
       <dependency>
         <groupId>com.mario.mario-parent</groupId>
@@ -154,16 +155,16 @@
         <artifactId>mario-common</artifactId>
         <version>${project.version}</version>
       </dependency>
-      <dependency>
-        <groupId>com.mario.mario-parent</groupId>
-        <artifactId>mario-jackson</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.mario.mario-parent</groupId>
-        <artifactId>mario-mail</artifactId>
-        <version>${project.version}</version>
-      </dependency>
+      <!--      <dependency>-->
+      <!--        <groupId>com.mario.mario-parent</groupId>-->
+      <!--        <artifactId>mario-jackson</artifactId>-->
+      <!--        <version>${project.version}</version>-->
+      <!--      </dependency>-->
+      <!--      <dependency>-->
+      <!--        <groupId>com.mario.mario-parent</groupId>-->
+      <!--        <artifactId>mario-mail</artifactId>-->
+      <!--        <version>${project.version}</version>-->
+      <!--      </dependency>-->
 <!--      <dependency>-->
 <!--        <groupId>com.mario.mario-parent</groupId>-->
 <!--        <artifactId>mario-redis</artifactId>-->
@@ -174,16 +175,16 @@
         <artifactId>mario-security</artifactId>
         <version>${project.version}</version>
       </dependency>
-      <dependency>
-        <groupId>com.mario.mario-parent</groupId>
-        <artifactId>mario-security-autoconfigure</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.mario.mario-parent</groupId>
-        <artifactId>mario-ali-search</artifactId>
-        <version>${project.version}</version>
-      </dependency>
+      <!--      <dependency>-->
+      <!--        <groupId>com.mario.mario-parent</groupId>-->
+      <!--        <artifactId>mario-security-autoconfigure</artifactId>-->
+      <!--        <version>${project.version}</version>-->
+      <!--      </dependency>-->
+      <!--      <dependency>-->
+      <!--        <groupId>com.mario.mario-parent</groupId>-->
+      <!--        <artifactId>mario-ali-search</artifactId>-->
+      <!--        <version>${project.version}</version>-->
+      <!--      </dependency>-->
       <dependency>
         <groupId>com.mario.mario-parent</groupId>
         <artifactId>mario-ali-rocketmq</artifactId>
@@ -199,66 +200,61 @@
         <artifactId>mario-ali-mq-autoconfigure</artifactId>
         <version>${project.version}</version>
       </dependency>
-      <dependency>
-        <groupId>com.mario.mario-parent</groupId>
-        <artifactId>mario-rocketmq</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.mario.mario-parent</groupId>
-        <artifactId>mario-rocketmq-example</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.mario.mario-parent</groupId>
-        <artifactId>mario-rocketmq-ext</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.mario.mario-parent</groupId>
-        <artifactId>mario-rocketmq-ext-autoconfigure</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.mario.mario-parent</groupId>
-        <artifactId>mario-elasticsearch</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.mario.mario-parent</groupId>
-        <artifactId>mario-mongodb</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.mario.mario-parent</groupId>
-        <artifactId>mario-http</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.mario.mario-parent</groupId>
-        <artifactId>mario-httpclient</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.mario.mario-parent</groupId>
-        <artifactId>mario-cmq</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.mario.mario-parent</groupId>
-        <artifactId>mario-cmq-ext</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.mario.mario-parent</groupId>
-        <artifactId>mario-cmq-example</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.mario.mario-parent</groupId>
-        <artifactId>mario-reg</artifactId>
-        <version>${project.version}</version>
-      </dependency>
+<!--      <dependency>-->
+<!--        <groupId>com.mario.mario-parent</groupId>-->
+<!--        <artifactId>mario-rocketmq-example</artifactId>-->
+<!--        <version>${project.version}</version>-->
+<!--      </dependency>-->
+<!--      <dependency>-->
+<!--        <groupId>com.mario.mario-parent</groupId>-->
+<!--        <artifactId>mario-rocketmq-ext</artifactId>-->
+<!--        <version>${project.version}</version>-->
+<!--      </dependency>-->
+<!--      <dependency>-->
+<!--        <groupId>com.mario.mario-parent</groupId>-->
+<!--        <artifactId>mario-rocketmq-ext-autoconfigure</artifactId>-->
+<!--        <version>${project.version}</version>-->
+<!--      </dependency>-->
+      <!--      <dependency>-->
+      <!--        <groupId>com.mario.mario-parent</groupId>-->
+      <!--        <artifactId>mario-elasticsearch</artifactId>-->
+      <!--        <version>${project.version}</version>-->
+      <!--      </dependency>-->
+      <!--      <dependency>-->
+      <!--        <groupId>com.mario.mario-parent</groupId>-->
+      <!--        <artifactId>mario-mongodb</artifactId>-->
+      <!--        <version>${project.version}</version>-->
+      <!--      </dependency>-->
+      <!--      <dependency>-->
+      <!--        <groupId>com.mario.mario-parent</groupId>-->
+      <!--        <artifactId>mario-http</artifactId>-->
+      <!--        <version>${project.version}</version>-->
+      <!--      </dependency>-->
+      <!--      <dependency>-->
+      <!--        <groupId>com.mario.mario-parent</groupId>-->
+      <!--        <artifactId>mario-httpclient</artifactId>-->
+      <!--        <version>${project.version}</version>-->
+      <!--      </dependency>-->
+      <!--      <dependency>-->
+      <!--        <groupId>com.mario.mario-parent</groupId>-->
+      <!--        <artifactId>mario-cmq</artifactId>-->
+      <!--        <version>${project.version}</version>-->
+      <!--      </dependency>-->
+      <!--      <dependency>-->
+      <!--        <groupId>com.mario.mario-parent</groupId>-->
+      <!--        <artifactId>mario-cmq-ext</artifactId>-->
+      <!--        <version>${project.version}</version>-->
+      <!--      </dependency>-->
+      <!--      <dependency>-->
+      <!--        <groupId>com.mario.mario-parent</groupId>-->
+      <!--        <artifactId>mario-cmq-example</artifactId>-->
+      <!--        <version>${project.version}</version>-->
+      <!--      </dependency>-->
+      <!--      <dependency>-->
+      <!--        <groupId>com.mario.mario-parent</groupId>-->
+      <!--        <artifactId>mario-reg</artifactId>-->
+      <!--        <version>${project.version}</version>-->
+      <!--      </dependency>-->
       <!--      <dependency>-->
       <!--        <groupId>com.mario.mario-parent</groupId>-->
       <!--        <artifactId>mario-reg-api</artifactId>-->
@@ -279,26 +275,26 @@
         <artifactId>mario-mysql</artifactId>
         <version>${project.version}</version>
       </dependency>
-      <dependency>
-        <groupId>com.mario.mario-parent</groupId>
-        <artifactId>mario-jdbc</artifactId>
-        <version>${project.version}</version>
-      </dependency>
+      <!--      <dependency>-->
+      <!--        <groupId>com.mario.mario-parent</groupId>-->
+      <!--        <artifactId>mario-jdbc</artifactId>-->
+      <!--        <version>${project.version}</version>-->
+      <!--      </dependency>-->
       <dependency>
         <groupId>com.mario.mario-parent</groupId>
         <artifactId>mario-shardingjdbc-autoconfigure</artifactId>
         <version>${project.version}</version>
       </dependency>
-      <dependency>
-        <groupId>com.mario.mario-parent</groupId>
-        <artifactId>mario-boot-autoimport</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.mario.mario-parent</groupId>
-        <artifactId>mario-server</artifactId>
-        <version>${project.version}</version>
-      </dependency>
+      <!--      <dependency>-->
+      <!--        <groupId>com.mario.mario-parent</groupId>-->
+      <!--        <artifactId>mario-boot-autoimport</artifactId>-->
+      <!--        <version>${project.version}</version>-->
+      <!--      </dependency>-->
+      <!--      <dependency>-->
+      <!--        <groupId>com.mario.mario-parent</groupId>-->
+      <!--        <artifactId>mario-server</artifactId>-->
+      <!--        <version>${project.version}</version>-->
+      <!--      </dependency>-->
       <!--      <dependency>-->
       <!--        <groupId>com.mario.mario-parent</groupId>-->
       <!--        <artifactId>mario-server-http</artifactId>-->
@@ -309,21 +305,21 @@
       <!--        <artifactId>mario-server-http-spring</artifactId>-->
       <!--        <version>${project.version}</version>-->
       <!--      </dependency>-->
-      <dependency>
-        <groupId>com.mario.mario-parent</groupId>
-        <artifactId>mario-ahas-autoconfigure</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.mario.mario-parent</groupId>
-        <artifactId>mario-trace</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.mario.mario-parent</groupId>
-        <artifactId>mario-dcdn</artifactId>
-        <version>${project.version}</version>
-      </dependency>
+      <!--      <dependency>-->
+      <!--        <groupId>com.mario.mario-parent</groupId>-->
+      <!--        <artifactId>mario-ahas-autoconfigure</artifactId>-->
+      <!--        <version>${project.version}</version>-->
+      <!--      </dependency>-->
+      <!--      <dependency>-->
+      <!--        <groupId>com.mario.mario-parent</groupId>-->
+      <!--        <artifactId>mario-trace</artifactId>-->
+      <!--        <version>${project.version}</version>-->
+      <!--      </dependency>-->
+      <!--      <dependency>-->
+      <!--        <groupId>com.mario.mario-parent</groupId>-->
+      <!--        <artifactId>mario-dcdn</artifactId>-->
+      <!--        <version>${project.version}</version>-->
+      <!--      </dependency>-->
       <!--<dependency>
           <groupId>com.mario.mario-parent</groupId>
           <artifactId>mario-cmq-ext</artifactId>
@@ -489,6 +485,11 @@
         <groupId>org.springframework</groupId>
         <artifactId>spring-context</artifactId>
         <version>${spring.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-data-redis</artifactId>
+        <version>${spring-boot.version}</version>
       </dependency>
       <dependency>
         <groupId>org.springframework</groupId>

@@ -7,9 +7,16 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/mario-common/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/mario-relation/pom.xml" />
+        <option value="$PROJECT_DIR$/mario-common-api/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/mario-redis/pom.xml" />
+        <option value="$PROJECT_DIR$/mario-shardingjdbc-autoconfigure/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="NodePackageJsonFileManager">
