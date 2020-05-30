@@ -885,12 +885,12 @@
     <repository>
       <id>maven-releases</id>
       <name>user release resp</name>
-      <url>http://127.0.0.1:8081/repository/maven-releases/</url>
+      <url>http://106.53.236.100:8081/repository/maven-releases/</url>
     </repository>
     <snapshotRepository>
       <id>maven-snapshots</id>
       <name>user snapshots resp</name>
-      <url>http://127.0.0.1:8081/repository/maven-snapshots/</url>
+      <url>http://106.53.236.100:8081/repository/maven-snapshots/</url>
     </snapshotRepository>
   </distributionManagement>
 </project>
