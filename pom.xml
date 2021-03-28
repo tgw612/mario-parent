@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <groupId>com.mario.mario-parent</groupId>
   <artifactId>mario-parent</artifactId>
   <packaging>pom</packaging>
@@ -17,7 +17,8 @@
     <module>mario-mysql</module>
     <module>mario-shardingjdbc-autoconfigure</module>
     <module>mario-relation</module>
-<!--    <module>mario-redis</module>-->
+    <module>mario-limit</module>
+    <!--    <module>mario-redis</module>-->
     <!--  -->
     <!--    <module>mario-jackson</module>-->
     <!--    <module>mario-jwt-login</module>-->
@@ -66,10 +67,11 @@
     <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
     <maven.surefire.plugin.version>2.17</maven.surefire.plugin.version>
     <maven.jar.plugin.version>3.2.0</maven.jar.plugin.version>
-    <maven.source.plugin.version>3.2.1</maven.source.plugin.version>
+    <maven.source.plugin.version>3.1.0</maven.source.plugin.version>
     <maven.resources.plugin.version>3.1.0</maven.resources.plugin.version>
     <maven.deploy.plugin.version>2.7</maven.deploy.plugin.version>
     <maven.war.plugin.version>2.4</maven.war.plugin.version>
+    <springboot.maven.plugin>2.3.0.RELEASE</springboot.maven.plugin>
 
     <spring-boot.version>2.1.1.RELEASE</spring-boot.version>
     <spring.version>5.1.3.RELEASE</spring.version>
@@ -144,6 +146,11 @@
         <artifactId>mario-relation</artifactId>
         <version>${project.version}</version>
       </dependency>
+      <dependency>
+        <groupId>com.mario.mario-parent</groupId>
+        <artifactId>mario-limit</artifactId>
+        <version>${project.version}</version>
+      </dependency>
       <!-- local dependency start  -->
       <dependency>
         <groupId>com.mario.mario-parent</groupId>
@@ -165,11 +172,11 @@
       <!--        <artifactId>mario-mail</artifactId>-->
       <!--        <version>${project.version}</version>-->
       <!--      </dependency>-->
-<!--      <dependency>-->
-<!--        <groupId>com.mario.mario-parent</groupId>-->
-<!--        <artifactId>mario-redis</artifactId>-->
-<!--        <version>${project.version}</version>-->
-<!--      </dependency>-->
+      <!--      <dependency>-->
+      <!--        <groupId>com.mario.mario-parent</groupId>-->
+      <!--        <artifactId>mario-redis</artifactId>-->
+      <!--        <version>${project.version}</version>-->
+      <!--      </dependency>-->
       <dependency>
         <groupId>com.mario.mario-parent</groupId>
         <artifactId>mario-security</artifactId>
@@ -200,21 +207,21 @@
         <artifactId>mario-ali-mq-autoconfigure</artifactId>
         <version>${project.version}</version>
       </dependency>
-<!--      <dependency>-->
-<!--        <groupId>com.mario.mario-parent</groupId>-->
-<!--        <artifactId>mario-rocketmq-example</artifactId>-->
-<!--        <version>${project.version}</version>-->
-<!--      </dependency>-->
-<!--      <dependency>-->
-<!--        <groupId>com.mario.mario-parent</groupId>-->
-<!--        <artifactId>mario-rocketmq-ext</artifactId>-->
-<!--        <version>${project.version}</version>-->
-<!--      </dependency>-->
-<!--      <dependency>-->
-<!--        <groupId>com.mario.mario-parent</groupId>-->
-<!--        <artifactId>mario-rocketmq-ext-autoconfigure</artifactId>-->
-<!--        <version>${project.version}</version>-->
-<!--      </dependency>-->
+      <!--      <dependency>-->
+      <!--        <groupId>com.mario.mario-parent</groupId>-->
+      <!--        <artifactId>mario-rocketmq-example</artifactId>-->
+      <!--        <version>${project.version}</version>-->
+      <!--      </dependency>-->
+      <!--      <dependency>-->
+      <!--        <groupId>com.mario.mario-parent</groupId>-->
+      <!--        <artifactId>mario-rocketmq-ext</artifactId>-->
+      <!--        <version>${project.version}</version>-->
+      <!--      </dependency>-->
+      <!--      <dependency>-->
+      <!--        <groupId>com.mario.mario-parent</groupId>-->
+      <!--        <artifactId>mario-rocketmq-ext-autoconfigure</artifactId>-->
+      <!--        <version>${project.version}</version>-->
+      <!--      </dependency>-->
       <!--      <dependency>-->
       <!--        <groupId>com.mario.mario-parent</groupId>-->
       <!--        <artifactId>mario-elasticsearch</artifactId>-->
@@ -769,7 +776,7 @@
         <plugin>
           <groupId>org.springframework.boot</groupId>
           <artifactId>spring-boot-maven-plugin</artifactId>
-          <version>2.3.0.RELEASE</version>
+          <version>${springboot.maven.plugin}</version>
           <configuration>
             <skip>true</skip>
           </configuration>
@@ -811,24 +818,12 @@
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
-        <version>2.3.0.RELEASE</version>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.8.1</version>
-        <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
-          <meminitial>1024m</meminitial>
-          <maxmem>1024m</maxmem>
-          <encoding>UTF-8</encoding>
-        </configuration>
+        <version>${springboot.maven.plugin}</version>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.0.0-M4</version>
+        <version>${maven.surefire.plugin.version}</version>
         <configuration>
           <argLine>-Xmx1024m -XX:PermSize=256m -XX:MaxPermSize=256m</argLine>
           <includes>
@@ -839,58 +834,21 @@
           <skip>true</skip>
         </configuration>
       </plugin>
-      <!--      <plugin>-->
-      <!--        <groupId>org.apache.maven.plugins</groupId>-->
-      <!--        <artifactId>maven-jar-plugin</artifactId>-->
-      <!--        <version>3.2.0</version>-->
-      <!--        <executions>-->
-      <!--          <execution>-->
-      <!--            <phase>package</phase>-->
-      <!--            <goals>-->
-      <!--              <goal>jar</goal>-->
-      <!--            </goals>-->
-      <!--            <configuration>-->
-      <!--              <excludes>-->
-      <!--                <exclude>**/test/*.class</exclude>-->
-      <!--              </excludes>-->
-      <!--            </configuration>-->
-      <!--          </execution>-->
-      <!--        </executions>-->
-      <!--      </plugin>-->
-      <!--      <plugin>-->
-      <!--        <groupId>org.apache.maven.plugins</groupId>-->
-      <!--        <artifactId>maven-source-plugin</artifactId>-->
-      <!--        <version>3.2.1</version>-->
-      <!--        <executions>-->
-      <!--          <execution>-->
-      <!--            <id>attach-sources</id>-->
-      <!--            <phase>install</phase>-->
-      <!--            <goals>-->
-      <!--              <goal>jar-no-fork</goal>-->
-      <!--            </goals>-->
-      <!--          </execution>-->
-      <!--        </executions>-->
-      <!--      </plugin>-->
-      <!--      <plugin>-->
-      <!--        <groupId>org.apache.maven.plugins</groupId>-->
-      <!--        <artifactId>maven-resources-plugin</artifactId>-->
-      <!--        <version>3.1.0</version>-->
-      <!--        <configuration>-->
-      <!--          <encoding>UTF-8</encoding>-->
-      <!--        </configuration>-->
-      <!--      </plugin>-->
     </plugins>
   </build>
   <distributionManagement>
     <repository>
       <id>maven-releases</id>
       <name>user release resp</name>
-      <url>http://106.53.236.100:8081/repository/maven-releases/</url>
+      <!--            <url>http://106.53.236.100:8081/repository/maven-releases/</url>-->
+      <url>http://127.0.0.1:8081/repository/maven-releases/</url>
     </repository>
     <snapshotRepository>
       <id>maven-snapshots</id>
       <name>user snapshots resp</name>
-      <url>http://106.53.236.100:8081/repository/maven-snapshots/</url>
+      <!--            <url>http://106.53.236.100:8081/repository/maven-snapshots/</url>-->
+      <!--            <url>http://192.168.3.5:8081/repository/maven-snapshots/</url>-->
+      <url>http://127.0.0.1:8081/repository/maven-snapshots/</url>
     </snapshotRepository>
   </distributionManagement>
 </project>
